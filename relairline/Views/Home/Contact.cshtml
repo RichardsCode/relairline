@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<section>
+    <div class="row my-4 no-gutters">
+        <div class="col-4 col-lg-2 col-md-3">
+            <div class="navbar sticky-top p-2 mt-4 d-block" id="sidemenu" style="background-color:blue;">
+                <a class="lime-text nav-item nav-link" href="#r1">Reservations</a>
+                <a class="lime-text nav-item nav-link" href="#l2">Lost Baggage</a>
+                <a class="lime-text nav-item nav-link" href="#b3">Billing</a>
+                <a class="lime-text nav-item nav-link" href="#c4">Other</a>
+            </div>
+        </div>
+        <div class="container col-8 col-lg-10 col-md-9 justify-content-sm-start">
+            <div class="col-12 col-md-8">
+                <h2>Need Help?</h2>
+                <p>Learn about how to reach us, sending us your questions and concerns online.</p><br>
+                <h3 id="r1">Reservations</h3>
+                <h4>Find help before you fly.</h4>
+                <p>Our reservations team can help with issues before your trip.</p>
+                <br>
+                <p>Here is a link to submit your reservations questions.</p>
+                <a data-toggle="modal" href="#contact_modal">Submit Reservations Questions</a><br><br><br>
+                <h3 id="l2">Lost Baggage</h3>
+                <p>
+                    If you have delayed or lost baggage, missing items, left on board items, or other baggage claims,
+                    here's what to do:
+                </p>
+                <br>
+                <p><b>Be sure to report the issue at your arrival airport within 24 hours of landing.</b></p>
+                <p>
+                    If you arrive at your destination and discover a baggage issue, report it right away at arrival
+                    airport; all reports should be made in-person within 24 hours of arrival time at one of our baggage
+                    service offices.
+                </p>
+                <br>
+                <p><b>If you don't file a report at the airport:</b></p>
+                <p>Submit a cliam request online to the airport baggage service office at your arrival airport to do so:</p>
+                <a data-toggle="modal" href="#contact_modal">Submit a lost baggage complaint</a><br><br>
+                <p><b>Check the status of your claim:</b></p>
+                <p>
+                    Most missing bags are found within the first 24 to 48 hours after your flight. If you filed a report
+                    at the airport of arrival and your bag has not been found after 5 days, Please contact our Central Baggage
+                    Servie.
+                </p><br>
+                <h3 id="b3">Billing</h3>
+                <p>If you have any questions about your bill, contact our billing department using the form below.</p>
+                <a data-toggle="modal" href="#contact_modal">Submit Billing Questions</a><br><br>
+                <h3 id="c4">Other General Questions</h3>
+                <p>If your have any other questions, complaints, or sugestions please submit your queries in this form below:</p>
+                <a data-toggle="modal" href="#contact_modal">Submit General Queries Form</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="contact_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Contact Form</h3>
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="close">
+                        <span>&times;</span>
+                    </button>
+                </div><!-- modal-header -->
+                <div class="modal-body" style="background-color: lightgray">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name..">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last name..">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email..">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <textarea class="form-control" id="subject" name="subject" placeholder="Please write your concern here.." style="height:200px"></textarea>
+                        </div>
+                        <input class="bg-success text-light" type="submit" value="Submit" onclick="close_modal()">
+                    </form>
+                </div><!-- modal-body -->
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+</section>
